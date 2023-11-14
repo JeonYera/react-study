@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
 function Hello() {
+  useEffect(() => {
+    console.log("Im here!");
+  }, []);
   return <h1>Hello</h1>;
 }
 
@@ -9,7 +12,7 @@ function App() {
   const onClick = () => setShowing((prev) => !prev);
   return (
     <div>
-      {showing ? <Hello />}
+      {showing ? <Hello /> : null}
       <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );

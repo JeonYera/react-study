@@ -1,0 +1,33 @@
+/* 이미지와 텍스트를 감싸는 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수직 정렬 (가운데 정렬) */
+}
+
+.movieList {
+  text-align: center; /* 수평 정렬 (가운데 정렬) */
+  color: whitesmoke;
+}
+
+.movieList img {
+  width: 300px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+/* 타이틀 색 변경 */
+.movieList h2 {
+  font-size: 25px;
+}
+
+.movieList li {
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+.movieList p {
+  margin-top: 20px;
+}

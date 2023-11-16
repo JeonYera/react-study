@@ -1,0 +1,47 @@
+/* 이미지와 텍스트를 감싸는 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 70px auto; /* 맨 위와 맨 아래에 마진 추가 */
+}
+
+/* 이미지와 텍스트를 감싸는 컨테이너 */
+.movieList div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* 이미지에 커서를 포인터로 변경하고 hover 효과 추가 */
+.movieList img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+/* 이미지에 호버 시 살짝 확대 */
+.movieList img:hover {
+  transform: scale(1.1);
+}
+
+/* 타이틀 색 변경 */
+.movieList h2 a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* 평점 */
+.movieList .rating {
+  font-size: 16px;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 20px;
+}

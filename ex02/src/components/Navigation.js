@@ -7,8 +7,18 @@ const Navigation = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link to="/">MOVIE COLLECTION</Link>
+          <Link className={styles.navTitle} to="/">
+            MOVIE PLUS
+          </Link>
         </li>
+      </ul>
+      <ul className={styles.navAuth}>
+        <li className={styles.navAuthItem}>
+          <Link to="/Login">Login</Link>
+        </li>
+      <li className={styles.navAuthItem}>
+        <Link to="/SignUp">Sign Up</Link>
+      </li>
       </ul>
     </nav>
   );

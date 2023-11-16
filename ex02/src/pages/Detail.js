@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "../styles/Detail.module.css";
 import Navigation from "../components/Navigation";
 import Movie from "../components/Movie";
+import Footer from "../components/Footer";
 
 function Detail() {
   const { id } = useParams();
@@ -19,11 +20,6 @@ function Detail() {
   useEffect(() => {
     getMovie();
   }, []);
-
-  useEffect(() => {
-    console.log(movie);
-  }, [movie]);
-
 
   if (!movie) {
     return <div>Loading...</div>;
@@ -45,6 +41,7 @@ function Detail() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

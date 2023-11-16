@@ -3,7 +3,7 @@ import Movie from "../components/Movie";
 import Loading from "../components/Loading";
 import styles from "../styles/Home.module.css";
 import Navigation from "../components/Navigation";
-
+import Footer from "../components/Footer";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -22,10 +22,6 @@ function Home() {
   useEffect(() => {
     getMovies()
   }, []);
-
-  useEffect(() => {
-    console.log(movies);
-  }, [movies]);
 
   return (
     <div>
@@ -52,6 +48,7 @@ function Home() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

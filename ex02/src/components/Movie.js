@@ -14,6 +14,7 @@ function Movie({ id, coverImg, title, summary, genres, rating, linkToDetail }) {
           </Link>
         </h2>
       ) : (
+
         <h2>
           <img src={coverImg} alt={title} />
           <div>{title}</div>

@@ -1,23 +1,57 @@
 .navbar {
   background-color: #212121;
   padding-top: 60px;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  position: relative; /* 부모 요소에 대한 상대적인 위치 지정 */
 }
 
 .navList {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   padding: 0;
+  margin: 0;
+}
+
+.navItem {
   margin: 0;
 }
 
 .navItem a {
   text-decoration: none;
-  color: rgb(209, 0, 0);
   font-weight: bold;
-  font-size: 40px;
+  color: rgb(233, 7, 7);
 }
 
 .navItem a:hover {
-  color: rgb(226, 34, 34);
+  color: rgb(200, 22, 22);
+}
+
+.navTitle {
+  font-size: 40px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.navAuth {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  position: absolute;
+  top: 5%; /* 부모 요소의 중앙에 위치하도록 지정 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 사용 */
+  right:5px;
+}
+
+.navAuthItem {
+  margin: 0;
+}
+
+.navAuthItem a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 15px;
 }

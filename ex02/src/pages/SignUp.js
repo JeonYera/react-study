@@ -49,7 +49,7 @@ const SignUp = () => {
   return (
     <div><Navigation />
     <div className={styles.container}>
-      <h1>회원가입</h1>
+        <h1>회원가입</h1>
       <form onSubmit={handleSubmit} className={styles.wrp}>
           <label>
             <input
@@ -58,6 +58,7 @@ const SignUp = () => {
               value={formData.username}
               onChange={handleChange}
               placeholder="아이디"
+              className={styles.input}
             />
           </label>
           <span>{errors.username}</span>
@@ -69,6 +70,7 @@ const SignUp = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="비밀번호"
+              className={styles.input}
             />
           </label>
           <span>{errors.password}</span>
@@ -80,6 +82,7 @@ const SignUp = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
               placeholder="비밀번호 확인"
+              className={styles.input}
             />
           </label>
           <span>{errors.confirmPassword}</span>
@@ -91,6 +94,7 @@ const SignUp = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="이름"
+              className={styles.input}
             />
           </label>
           <span>{errors.name}</span>
@@ -102,6 +106,7 @@ const SignUp = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
               placeholder="전화번호"
+              className={styles.input}
             />
           </label>
           <span>{errors.phoneNumber}</span>
@@ -113,6 +118,7 @@ const SignUp = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="이메일"
+              className={styles.input}
             />
           </label>
           <span>{errors.email}</span>

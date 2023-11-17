@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import styles from "../styles/Login.module.css";
-import Footer from "../components/Footer";
+import Navigation from './Navigation';
+import styles from '../styles/Login.module.css';
+import Footer from './Footer';
 
-const Login = () => {
+const Login = ({ onCloseModal }) => {
   // 폼 상태 관리를 위한 useState
   const [formData, setFormData] = useState({
     username: '',
@@ -31,6 +31,8 @@ const Login = () => {
       // 로그인 성공 시의 처리
       setLoginError('');
       alert('로그인 성공!');
+      // 모달을 닫도록 부모 컴포넌트로부터 전달된 콜백 함수 호출
+      onCloseModal();
     } else {
       // 로그인 실패 시의 처리
       setLoginError('아이디 또는 비밀번호가 잘못되었습니다.');
@@ -38,8 +40,8 @@ const Login = () => {
   };
 
   return (
-    <div><Navigation />
-      <div className={styles.container}>
+    <div className={styles.modal}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <h1>로그인</h1>
         <form onSubmit={handleSubmit}>
           <label>
@@ -49,7 +51,7 @@ const Login = () => {
               value={formData.username}
               onChange={handleChange}
               placeholder="아이디"
-              
+              className={styles.input}
             />
           </label>
           <br />
@@ -60,13 +62,14 @@ const Login = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="비밀번호"
+              className={styles.input}
             />
           </label>
           <br />
+          <button type="submit">로그인</button>
         </form>
         {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
       </div>
-      <Footer />
     </div>
   );
 };
